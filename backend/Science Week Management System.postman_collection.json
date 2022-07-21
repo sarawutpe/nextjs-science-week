@@ -1,0 +1,4789 @@
+{
+	"info": {
+		"_postman_id": "24d9817d-b33c-49b0-806b-bd76561e23bf",
+		"name": "Science Week Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13611361"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Verify Token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFkbWluMSIsIm5hbWUiOiJhZG1pbjEiLCJsZXZlbCI6MX0sImV4cCI6MTY0NDA0NzYwNywiaWF0IjoxNjQ0MDQ3NTk1fQ.jXl8RLx48oT5eksl2Scm2n2_XJp0sWKTXBdMdczUrv8oqlqZS6kuLgmTHON9h6BB8ORNZp0QkCogTBNDGOCMvZq9Bk8wSJYi5ojRkJlrnfz_8CDOPCia3fI4GDYN8ZKq1R0t31s0cFGsPqP2Jv4k1V0bLwPz68q4vZTIOlu28OE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFkbWluMSIsIm5hbWUiOiJhZG1pbjEiLCJsZXZlbCI6MX0sImV4cCI6MTY0NDA0NzkzOSwiaWF0IjoxNjQ0MDQ3OTI3fQ.l96Ws32M9idhzuIQGZwZriroQBYKVng4GGDT8geEY3-Ii-MWffRjq0XyoE9mHV2KvClag9Y1bb4vL70b6pn11xVGJ4yGVR8Bfq8quQ79GFPBjtJpO3efeEDbI2uWbMEmLHAi_LZ606P5QG_yXPELGQ1IvNRBQBtcSTj0Bf1ul7U",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/access-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"access-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoiZGVtbyIsImxldmVsIjpudWxsfSwiZXhwIjoxNjQyMTAxNzMyLyLCJpYXQiOjE2NDIwOTU3MzJ9.EGN9UZ12x1N1Dj4sr8CNzn5jyHXXl7bnq92O1eBbm0O4Fewe9x6PnUMTSN-cJ_y-BIkWKsySN7lI1a-B_gEIhPmW5eUcyzdDGbONlmONo3huS2CetUWhU6OJuNst_um3BCX6Q9ORzCBKmi3Yq5RUlo-sL38w-3xsqtid_DfLvjv4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/test/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"test",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Token Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFkbWluMSIsIm5hbWUiOiJhZG1pbjEiLCJsZXZlbCI6MX0sImV4cCI6MTY0NDA0NzYwNywiaWF0IjoxNjQ0MDQ3NTk1fQ.jXl8RLx48oT5eksl2Scm2n2_XJp0sWKTXBdMdczUrv8oqlqZS6kuLgmTHON9h6BB8ORNZp0QkCogTBNDGOCMvZq9Bk8wSJYi5ojRkJlrnfz_8CDOPCia3fI4GDYN8ZKq1R0t31s0cFGsPqP2Jv4k1V0bLwPz68q4vZTIOlu28OE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFkbWluMSIsIm5hbWUiOiJhZG1pbjEiLCJsZXZlbCI6MX0sImV4cCI6MTY0NDA0NzkzOSwiaWF0IjoxNjQ0MDQ3OTI3fQ.l96Ws32M9idhzuIQGZwZriroQBYKVng4GGDT8geEY3-Ii-MWffRjq0XyoE9mHV2KvClag9Y1bb4vL70b6pn11xVGJ4yGVR8Bfq8quQ79GFPBjtJpO3efeEDbI2uWbMEmLHAi_LZ606P5QG_yXPELGQ1IvNRBQBtcSTj0Bf1ul7U",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/test/verify-token/eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImF1dGgiOnRydWUsImlkIjoxLCJsZXZlbCI6MX0sImV4cCI6MTY0OTI0NTkyNiwiaWF0IjoxNjQ5MjQyMzI2fQ.eRvedvxYPiMkG5SUa8-yZZOAPum-lwwimyuo4hS683QZ4ucFlhSSLjorb_TU-KYIOWl2H6FuuGGvIv2OKsHymsMlScA14Llg-fbh7xDMkVFQefAOeuVaUpf_bAoHYpkhDffOlLo89wBvM6YsZ_bXxqoAVT1-TRfwS_1jqPMObuI",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"test",
+								"verify-token",
+								"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImF1dGgiOnRydWUsImlkIjoxLCJsZXZlbCI6MX0sImV4cCI6MTY0OTI0NTkyNiwiaWF0IjoxNjQ5MjQyMzI2fQ.eRvedvxYPiMkG5SUa8-yZZOAPum-lwwimyuo4hS683QZ4ucFlhSSLjorb_TU-KYIOWl2H6FuuGGvIv2OKsHymsMlScA14Llg-fbh7xDMkVFQefAOeuVaUpf_bAoHYpkhDffOlLo89wBvM6YsZ_bXxqoAVT1-TRfwS_1jqPMObuI"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Session",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoiZGVtbyIsImxldmVsIjpudWxsfSwiZXhwIjoxNjQyMTAxNzMyLyLCJpYXQiOjE2NDIwOTU3MzJ9.EGN9UZ12x1N1Dj4sr8CNzn5jyHXXl7bnq92O1eBbm0O4Fewe9x6PnUMTSN-cJ_y-BIkWKsySN7lI1a-B_gEIhPmW5eUcyzdDGbONlmONo3huS2CetUWhU6OJuNst_um3BCX6Q9ORzCBKmi3Yq5RUlo-sL38w-3xsqtid_DfLvjv4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "account_type",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "member2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "member2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "member2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "0123456789",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "123 123",
+									"type": "text"
+								},
+								{
+									"key": "academy_name",
+									"value": "udru",
+									"type": "text"
+								},
+								{
+									"key": "academy_address",
+									"value": "123 123",
+									"type": "text"
+								},
+								{
+									"key": "suspend",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoiZGVtbyIsImxldmVsIjpudWxsfSwiZXhwIjoxNjQyMTAxNzMyLyLCJpYXQiOjE2NDIwOTU3MzJ9.EGN9UZ12x1N1Dj4sr8CNzn5jyHXXl7bnq92O1eBbm0O4Fewe9x6PnUMTSN-cJ_y-BIkWKsySN7lI1a-B_gEIhPmW5eUcyzdDGbONlmONo3huS2CetUWhU6OJuNst_um3BCX6Q9ORzCBKmi3Yq5RUlo-sL38w-3xsqtid_DfLvjv4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin2@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify reset Password",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/reset-password/eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImFjdGlvbiI6InJlc2V0LXBhc3N3b3JkIiwiaWQiOjIsInR5cGUiOiJhZG1pbiJ9LCJleHAiOjE2NDQwNzQ1MDgsImlhdCI6MTY0NDA3NDQ0OH0.Wda7-pS8Xt3MdMitxssITMn2jQXrlKRws0mcLD8GiqMJ5e3F9nKiAEpPNB6Bx34zAwS6-nbtmqEu97Yh4ArXqnXSfrWKDywGV1X9SghmqG7YJFSlRaD0VSUkMxaC6jF1LchetrpvYn0zl8p5YiNKjPr4c2rwcs-N1yDSUEMpRjQ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password",
+								"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImFjdGlvbiI6InJlc2V0LXBhc3N3b3JkIiwiaWQiOjIsInR5cGUiOiJhZG1pbiJ9LCJleHAiOjE2NDQwNzQ1MDgsImlhdCI6MTY0NDA3NDQ0OH0.Wda7-pS8Xt3MdMitxssITMn2jQXrlKRws0mcLD8GiqMJ5e3F9nKiAEpPNB6Bx34zAwS6-nbtmqEu97Yh4ArXqnXSfrWKDywGV1X9SghmqG7YJFSlRaD0VSUkMxaC6jF1LchetrpvYn0zl8p5YiNKjPr4c2rwcs-N1yDSUEMpRjQ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "to",
+									"value": "1234",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/reset-password/TK1234/1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password",
+								"TK1234",
+								"1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Initial Account",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "demo",
+									"type": "text"
+								},
+								{
+									"key": "level",
+									"value": "null",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/account/demo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"account",
+								"demo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password Member And Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "current_password",
+									"value": "12346",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/auth/password/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"password",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "Add News",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "news_topic",
+									"value": "news",
+									"type": "text"
+								},
+								{
+									"key": "news_img",
+									"type": "file",
+									"src": "/C:/Users/LEGION/Desktop/S__62332932.jpg"
+								},
+								{
+									"key": "news_desc",
+									"value": "desc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/news-management/news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"news-management",
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/news-management/news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"news-management",
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get News By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/news-management/news/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"news-management",
+								"news",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update News By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "news_topic",
+									"value": "xxxzz",
+									"type": "text"
+								},
+								{
+									"key": "news_img",
+									"type": "file",
+									"src": "/C:/Users/LEGION/Desktop/messageImage_1643000711362.jpg"
+								},
+								{
+									"key": "news_desc",
+									"value": "xxxzz",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/news-management/news/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"news-management",
+								"news",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete News By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/news-management/news/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"news-management",
+								"news",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Member",
+					"item": [
+						{
+							"name": "Add Member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "@n",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "@n",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "n@n.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "0123456789",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "123 123",
+											"type": "text"
+										},
+										{
+											"key": "academy_name",
+											"value": "udru",
+											"type": "text"
+										},
+										{
+											"key": "academy_address",
+											"value": "udru",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "member",
+											"type": "text"
+										},
+										{
+											"key": "suspend",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/member",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"member"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Member",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/member?search=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"member"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Member By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/member/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"member",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Member",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "member_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "academy_name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "academy_address",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "suspend",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/member/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"member",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Member",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/member/35",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"member",
+										"35"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Add Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "2@",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "my name is",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "type",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "2@",
+											"type": "text"
+										},
+										{
+											"key": "level",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "suspend",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Initial Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/initial/admin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"initial",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Admin",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "pfo1",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "test1",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"type": "file",
+											"src": "/C:/Users/LEGION/Desktop/test_uploads/icon-512x512.png"
+										},
+										{
+											"key": "email",
+											"value": "pfo1",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "level",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "suspend",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/admin/19",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"admin",
+										"19"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Admin",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/admin?search=gmail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"admin"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "gmail"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Admin By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account/admin/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"admin",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Admin",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/account-management/admin/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"account-management",
+										"admin",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "School",
+			"item": [
+				{
+					"name": "Get School By Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/school-management/school/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"school-management",
+								"school",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "All Activity",
+			"item": [
+				{
+					"name": "Activity",
+					"item": [
+						{
+							"name": "Add Activity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "admin_id",
+											"value": "10",
+											"type": "default"
+										},
+										{
+											"key": "activity_name",
+											"value": "กิจกรรมการแข่งขันวาดรูป",
+											"type": "default"
+										},
+										{
+											"key": "apply_from",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_to",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_start",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_detail",
+											"value": "รายละเอียด",
+											"type": "default"
+										},
+										{
+											"key": "liaison_officer",
+											"value": "a b c",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity By Admin Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity/admin/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity",
+										"admin",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity Detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity-detail/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity-detail",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity By Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "admin_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "activity_name",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_from",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_to",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_start",
+											"value": "14-1-65",
+											"type": "default"
+										},
+										{
+											"key": "activity_detail",
+											"value": "รายละเอียด",
+											"type": "default"
+										},
+										{
+											"key": "liaison_officer",
+											"value": "a b c",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Activity Copy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_name",
+											"value": "กิจกรรมการทำเว็บ2",
+											"type": "default"
+										},
+										{
+											"key": "apply_from",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_to",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_start",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_detail",
+											"value": "รายละเอียด",
+											"type": "default"
+										},
+										{
+											"key": "liaison_officer",
+											"value": "a b c",
+											"type": "default"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity/20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity",
+										"20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Activity By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "admin_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "activity_name",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_from",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_to",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_start",
+											"value": "14-1-65",
+											"type": "default"
+										},
+										{
+											"key": "activity_detail",
+											"value": "รายละเอียด",
+											"type": "default"
+										},
+										{
+											"key": "liaison_officer",
+											"value": "a b c",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity/39",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity",
+										"39"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Activity Doc",
+					"item": [
+						{
+							"name": "Add Activity Doc",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "activity_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "activity_doc_desc",
+											"value": "คำอธิบาย ทดสอบ",
+											"type": "text"
+										},
+										{
+											"key": "activity_doc_path",
+											"type": "file",
+											"src": "/C:/Users/LEGION/Desktop/กลุ่มที่ 2 การศึกษาเครื่องมือที่ใช้ในการเรียนการสอนออนไลน์ของระดับอุดมศึกษาที่เหมาะสมในประเทศไทย ภายใต้การแพร่ระบาดของเชื้อไวรัสโควิด-19.docx"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-doc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-doc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity Doc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-doc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-doc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity Doc By Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "admin_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "activity_name",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_from",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_to",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_start",
+											"value": "14-1-65",
+											"type": "default"
+										},
+										{
+											"key": "activity_detail",
+											"value": "รายละเอียด",
+											"type": "default"
+										},
+										{
+											"key": "liaison_officer",
+											"value": "a b c",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-doc/44",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-doc",
+										"44"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Activity Doc",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "activity_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "activity_doc_desc",
+											"value": "แก้ไข 44555",
+											"type": "text"
+										},
+										{
+											"key": "activity_doc_path",
+											"type": "file",
+											"src": "/C:/Program Files/Sublime Text 3/sublime_text.exe"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-doc/44",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-doc",
+										"44"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Activity Doc By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "admin_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "activity_name",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_from",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_to",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_start",
+											"value": "14-1-65",
+											"type": "default"
+										},
+										{
+											"key": "activity_detail",
+											"value": "รายละเอียด",
+											"type": "default"
+										},
+										{
+											"key": "liaison_officer",
+											"value": "a b c",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-doc/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-doc",
+										"8"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Activity Link",
+					"item": [
+						{
+							"name": "Add Activity Link",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_id",
+											"value": "2",
+											"type": "default"
+										},
+										{
+											"key": "activity_link_desc",
+											"value": "desc",
+											"type": "default"
+										},
+										{
+											"key": "activity_link_src",
+											"value": "https://www.net",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-link",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-link"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity Link",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-link",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-link"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity Link By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-link/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-link",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Activity Link",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_link_desc",
+											"value": "desc 62152151",
+											"type": "default"
+										},
+										{
+											"key": "activity_link_src",
+											"value": "path 165265",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-link/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-link",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Activity Link By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "admin_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "activity_name",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_from",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_to",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_start",
+											"value": "14-1-65",
+											"type": "default"
+										},
+										{
+											"key": "activity_detail",
+											"value": "รายละเอียด",
+											"type": "default"
+										},
+										{
+											"key": "liaison_officer",
+											"value": "a b c",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-list/activity-link/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-list",
+										"activity-link",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Activity Level",
+					"item": [
+						{
+							"name": "Add Activity Level",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_level_name",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "level_type",
+											"value": "2",
+											"type": "default"
+										},
+										{
+											"key": "academy_limit",
+											"value": "3",
+											"type": "default"
+										},
+										{
+											"key": "participant_limit",
+											"value": "4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity-level",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity-level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity Level",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity-level",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity-level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Activity Level By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity-level/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity-level",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Activity Level",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_level_name",
+											"value": "a",
+											"type": "default"
+										},
+										{
+											"key": "level_type",
+											"value": "a",
+											"type": "default"
+										},
+										{
+											"key": "academy_limit",
+											"value": "a",
+											"type": "text"
+										},
+										{
+											"key": "participant_limit",
+											"value": "a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity-level/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity-level",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Activity Level By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "activity_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "admin_id",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "activity_name",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_from",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "apply_to",
+											"value": "2022-01-12 19:03:32",
+											"type": "default"
+										},
+										{
+											"key": "activity_start",
+											"value": "14-1-65",
+											"type": "default"
+										},
+										{
+											"key": "activity_detail",
+											"value": "รายละเอียด",
+											"type": "default"
+										},
+										{
+											"key": "liaison_officer",
+											"value": "a b c",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8085/api/v1/activity-management/activity-level/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"activity-management",
+										"activity-level",
+										"12"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Program",
+			"item": [
+				{
+					"name": "Add Program",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "activity_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "activity_level_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "confirm",
+									"value": "0",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/program-management/program",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"program-management",
+								"program"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Program",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/program-management/program",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"program-management",
+								"program"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Program By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/program-management/program/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"program-management",
+								"program",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Program By AdminId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/program-management/program/admin/3?search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"program-management",
+								"program",
+								"admin",
+								"3"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Program Detail By Activity Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/program-management/program-detail/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"program-management",
+								"program-detail",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Program ById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/program-management/program/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"program-management",
+								"program",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Program",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "activity_link_desc",
+									"value": "desc 62152151",
+									"type": "default"
+								},
+								{
+									"key": "activity_link_src",
+									"value": "path 165265",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/program-management/program/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"program-management",
+								"program",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Program By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "activity_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "admin_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "activity_name",
+									"value": "2022-01-12 19:03:32",
+									"type": "default"
+								},
+								{
+									"key": "apply_from",
+									"value": "2022-01-12 19:03:32",
+									"type": "default"
+								},
+								{
+									"key": "apply_to",
+									"value": "2022-01-12 19:03:32",
+									"type": "default"
+								},
+								{
+									"key": "activity_start",
+									"value": "14-1-65",
+									"type": "default"
+								},
+								{
+									"key": "activity_detail",
+									"value": "รายละเอียด",
+									"type": "default"
+								},
+								{
+									"key": "liaison_officer",
+									"value": "a b c",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/program-management/program/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"program-management",
+								"program",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Site",
+			"item": [
+				{
+					"name": "Update Site",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "site_title",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "site_header",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "site_banner",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "site_footer",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/site-management/site",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"site-management",
+								"site"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Site",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/site-management/site",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"site-management",
+								"site"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Award Attachment",
+			"item": [
+				{
+					"name": "Add Award Attachment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "award_attachment_name",
+									"value": "xxx",
+									"type": "text"
+								},
+								{
+									"key": "award_attachment_path",
+									"type": "file",
+									"src": [
+										"/C:/Users/LEGION/Desktop/ระบบสารสนเทศกิจกรรมสัปดาห์วิทยาศาสตร์แห่งชาติ-Higlight.pdf",
+										"/C:/Users/LEGION/Desktop/แบบฟอร์มการแบ่งขอบเขตการเขียนโปรแกรม 50% 100%.pdf",
+										"/C:/Users/LEGION/Desktop/บทที่-1-2-3-ระบบสารสนเทศกิจกรรมสัปดาห์วิทยาศ_2.pdf"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/activity-management/award-attachment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"activity-management",
+								"award-attachment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Award Attachment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/activity-management/award-attachment?search=new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"activity-management",
+								"award-attachment"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "new"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Award Attachment By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "activity_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "admin_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "activity_name",
+									"value": "2022-01-12 19:03:32",
+									"type": "default"
+								},
+								{
+									"key": "apply_from",
+									"value": "2022-01-12 19:03:32",
+									"type": "default"
+								},
+								{
+									"key": "apply_to",
+									"value": "2022-01-12 19:03:32",
+									"type": "default"
+								},
+								{
+									"key": "activity_start",
+									"value": "14-1-65",
+									"type": "default"
+								},
+								{
+									"key": "activity_detail",
+									"value": "รายละเอียด",
+									"type": "default"
+								},
+								{
+									"key": "liaison_officer",
+									"value": "a b c",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/activity-management/award-attachment/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"activity-management",
+								"award-attachment",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Award Attachment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "award_attachment_path",
+									"type": "file",
+									"src": "/C:/Users/LEGION/Desktop/zzz เอกสาร new.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/activity-management/award-attachment/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"activity-management",
+								"award-attachment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Award Attachment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/activity-management/award-attachment/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"activity-management",
+								"award-attachment",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Certificate",
+			"item": [
+				{
+					"name": "Add Certificate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "certificate_name",
+									"value": "cer1",
+									"type": "text"
+								},
+								{
+									"key": "certificate_img",
+									"type": "file",
+									"src": "/C:/Users/LEGION/Desktop/certificate-of-appreciation.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/activity-management/certificate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"activity-management",
+								"certificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Certificate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/activity-management/certificate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"activity-management",
+								"certificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Certificate By Type",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "activity_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "admin_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "activity_name",
+									"value": "2022-01-12 19:03:32",
+									"type": "default"
+								},
+								{
+									"key": "apply_from",
+									"value": "2022-01-12 19:03:32",
+									"type": "default"
+								},
+								{
+									"key": "apply_to",
+									"value": "2022-01-12 19:03:32",
+									"type": "default"
+								},
+								{
+									"key": "activity_start",
+									"value": "14-1-65",
+									"type": "default"
+								},
+								{
+									"key": "activity_detail",
+									"value": "รายละเอียด",
+									"type": "default"
+								},
+								{
+									"key": "liaison_officer",
+									"value": "a b c",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/certificate-management/certificate/type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"certificate-management",
+								"certificate",
+								"type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Certificate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "certificate_name",
+									"value": "cer 123 123 456 zzz",
+									"type": "text"
+								},
+								{
+									"key": "certificate_img",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/activity-management/certificate/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"activity-management",
+								"certificate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Certificate",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/activity-management/certificate/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"activity-management",
+								"certificate",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Form",
+			"item": [
+				{
+					"name": "Form Science Day",
+					"item": [
+						{
+							"name": "Form Science Day",
+							"item": [
+								{
+									"name": "Get Form Science Day",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-science-day",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-science-day"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add Form Science Day",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "form_science_day_title",
+													"value": "form test",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-science-day",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-science-day"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Form Science Day By Id Copy",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "form_science_day_title",
+													"value": "xxx",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-science-day/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-science-day",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Form Science Day",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "form_science_day_title",
+													"value": "xxx",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-science-day/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-science-day",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Form Science Day",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-science-day/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-science-day",
+												"2"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Form Science Day Radio",
+							"item": []
+						},
+						{
+							"name": "Form Science  Day Response",
+							"item": [
+								{
+									"name": "Get Form Science  Day Response",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"member_id\": \"1\",\r\n  \"form_activity_id\": 9,\r\n  \"response_list\": [ { \"response\": \"ชื่อ\" }, { \"response\": \"23\" }, { \"response\": \"IT\" } ]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-science-day-response",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-science-day-response"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Form Science  Day Response",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"member_id\": \"1\",\r\n  \"form_activity_id\": 9,\r\n  \"response_list\": [ { \"response\": \"ชื่อ\" }, { \"response\": \"23\" }, { \"response\": \"IT\" } ]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-science-day/response",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-science-day",
+												"response"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Form Activity",
+					"item": [
+						{
+							"name": "Form Activity Response",
+							"item": [
+								{
+									"name": "Get Form Science Day Response",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-science-day-response",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-science-day-response"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Form Activity Response By Activity Id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-activity-response/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-activity-response",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Form Activity",
+							"item": [
+								{
+									"name": "Add Form Activity",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "activity_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "form_activity_title",
+													"value": "test form",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-activity",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-activity"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Form Activity",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-activity",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-activity"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Form Activity By Id",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "form_activity_title",
+													"value": "xxx",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-activity/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-activity",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Form Activity",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "form_activity_title",
+													"value": "xxx",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-activity/10",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-activity",
+												"10"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Form Activity",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "form_science_day_title",
+													"value": "xxx",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8085/api/v1/form-management/form-activity/10",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8085",
+											"path": [
+												"api",
+												"v1",
+												"form-management",
+												"form-activity",
+												"10"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Participant",
+			"item": [
+				{
+					"name": "Get Participant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/participant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"participant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Participant By Admin Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/participant/admin/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"participant",
+								"admin",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Participant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/participant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"participant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Participant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/participant/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"participant",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Competition",
+			"item": [
+				{
+					"name": "Add Competition",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition/result?activity=1&activity_level=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition",
+								"result"
+							],
+							"query": [
+								{
+									"key": "activity",
+									"value": "1"
+								},
+								{
+									"key": "activity_level",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition By Member Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition/member/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition",
+								"member",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Competition",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"competition_id\": 3,\r\n  \"advisor\": \"อาจารย์..\",\r\n  \"participant_name\": [\r\n    { \"participant_id\": \"8\", \"participant_name\": \"นศ  go lang 2 xxx\" },\r\n    {\r\n      \"participant_id\": \"9\",\r\n      \"participant_name\": \"นศ go lang 3 lastname edit\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Competition Result",
+			"item": [
+				{
+					"name": "Add Competition Result",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition-result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition-result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition Result",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition-result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition-result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition Result By Member Id Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition-result/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition-result",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition Result By Admin Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition-result/admin/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition-result",
+								"admin",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition Result By Overview",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition-result/overview",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition-result",
+								"overview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition Result By Activity Id and Activity Level Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition-result?activity=2&activity_level=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition-result"
+							],
+							"query": [
+								{
+									"key": "activity",
+									"value": "2"
+								},
+								{
+									"key": "activity_level",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition Result And Proof Of Payment  By Activity Id and Activity Level Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition-result/proof-of-payment?search=''&activity=1&activity_level=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition-result",
+								"proof-of-payment"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "''"
+								},
+								{
+									"key": "activity",
+									"value": "1"
+								},
+								{
+									"key": "activity_level",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition Result Check",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition-result/check",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition-result",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Competition By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "competition_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "member_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "program_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "advisor",
+									"value": "a b c d e f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition-result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition-result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Check Competition Result",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "activity_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activity_level_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/competition/check/result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"competition",
+								"check",
+								"result"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Award Level",
+			"item": [
+				{
+					"name": "Add Award Level",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "award_level_name",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/award-level",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"award-level"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Award Level",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/award-level",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"award-level"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Award Level",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "award_level_name",
+									"value": "1 edit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/award-level/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"award-level",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Award Level",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/competition-management/award-level/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"competition-management",
+								"award-level",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Get Report All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/report/participant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"participant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Competition",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/report/competition",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"competition"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Competition Result",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/report/competition-result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"competition-result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Competition Result By Program Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/report/competition/24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"competition",
+								"24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Competition Award",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/report/competition-award",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"competition-award"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Competition Award By Admin Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/report/competition-award/admin/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"competition-award",
+								"admin",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Form Activity Response",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/report/form-activity-responses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"form-activity-responses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Participant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/report/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Report Participant By Admin Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/v1/report/participant/admin/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"report",
+								"participant",
+								"admin",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email",
+			"item": [
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "activity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activity_level",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "ทดสอบ",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "กิจกรรม123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/api/v1/email/send",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"v1",
+								"email",
+								"send"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

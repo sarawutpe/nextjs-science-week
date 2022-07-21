@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  color: #1a2027;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-size: '"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"';
+  font-weight: 400;
+  background-color: #fff;
+}
+
+.dropzone {
+  text-align: center;
+  padding: 20px;
+  border: 3px dashed #eeeeee;
+  background-color: #fafafa;
+  color: #bdbdbd;
+}
+
+.custom-shadow {
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+    rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  overflow: hidden;
+  min-width: 275px;
+}
+
+.custom-space:not(:last-child) {
+  /* border: 1px solid dashed; */
+  margin-bottom: 8px;
+}
+
+.solid-style-one:not(:last-child) {
+  border-top: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.solid-style-two:not(:last-child) {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.group-header .saving-button .loading-spinner {
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  left: 10px;
+}
+
+#app-loader {
+  margin-top: -30px;
+  text-align: center;
+}
+
+#app-loader .loading-spinner {
+  opacity: 0.5;
+  width: 38px;
+}
+
+.loading-spinner,
+.spinner {
+  display: inline-flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  position: relative;
+  vertical-align: middle;
+  width: 30px;
+  height: 6px;
+}
+
+.loading-spinner i.spinner-dot,
+.spinner i.spinner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #96a3b6;
+  -webkit-animation: pulse 0.85s infinite ease-in-out;
+  -o-animation: pulse 0.85s infinite ease-in-out;
+  animation: pulse 0.85s infinite ease-in-out;
+}
+
+.loading-spinner i.spinner-dot.spinner-dot--one,
+.spinner i.spinner-dot.spinner-dot--one {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.loading-spinner i.spinner-dot.spinner-dot--two,
+.spinner i.spinner-dot.spinner-dot--two {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+.spinner--inverted.loading-spinner i.spinner-dot,
+.spinner.spinner--inverted i.spinner-dot {
+  background: #fff;
+}
+
+@-webkit-keyframes pulse {
+  0%,
+  100%,
+  80% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes pulse {
+  0%,
+  100%,
+  80% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100%,
+  80% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.loading-spinner .dots {
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+}
+
+textarea {
+  resize: none;
+}
+
+.modal {
+  position: 'absolute';
+  top: '50%';
+  left: '50%';
+  transform: 'translate(-50%, -50%)';
+  min-width: '400px';
+  min-height: '400px';
+  background-color: 'inherit';
+  border: '2px solid #000';
+  box-shadow: 24;
+  padding: 4;
+}
+
+.resize {
+  cursor: pointer;
+}
+
+/* google chart */
+svg > g > g:last-child { pointer-events: none }
+
